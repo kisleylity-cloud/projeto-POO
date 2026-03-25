@@ -1,1 +1,12 @@
 
+public class SistemaAutenticacao {
+
+    public static void autenticar(Permissao usuario, String login, String senha) {
+        if (usuario.acessarSistema(login, senha)) {
+            System.out.println("Acesso liberado.");
+            usuario.exibirPermissoes();
+        } else {
+            System.out.println("Login ou senha inválidos.");
+        }
+    }
+}
